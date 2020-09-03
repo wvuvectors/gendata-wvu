@@ -1,0 +1,12 @@
+Welcome and congratulations! You have made it this far. Continue below, if you dare...
+
+STEP 5. SSH to the server spruce.hpc.wvu.edu, using your WVUID and password to login.
+
+STEP 6. Examine (using ls) the contents of the directory '/scratch/tpd0001/gendata/starter_pack/'. What is the name of the text file in that directory?
+
+STEP 7. In your local copy of the gendata-wvu repo, create a new text file using your last name (e.g., driscoll.txt).
+
+STEP 8. In this new file, type the name of the text file that you found on spruce.
+
+STEP 9. Switch from the master branch to the starter_pack branch, add your new file, commit your changes, and push it to the remote repository.
+
