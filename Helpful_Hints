@@ -1,4 +1,11 @@
 
-Address to connect to the Spruce Knob cluster:
-
+1. Address to connect to the Spruce Knob cluster:
 spruce.hpc.wvu.edu
+
+2. The git workflow:
+	git pull
+	<make your changes>
+	git add *
+	git commit -m "MESSAGE"
+	git push origin master
+
