@@ -8,5 +8,5 @@ STEP 7. In your local copy of the gendata-wvu repo, create a new text file using
 
 STEP 8. In this new file, type the name of the text file that you found on spruce.
 
-STEP 9. Switch from the master branch to the starter_pack branch, add your new file, commit your changes, and push it to the remote repository.
+STEP 9. Add your new file to the starter_pack folder on github, commit your changes, and push it to the remote repository.
 
