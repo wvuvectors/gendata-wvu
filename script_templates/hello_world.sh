@@ -1,4 +1,6 @@
 #! /bin/bash
 
-echo "Hello World!"
+#echo "I am a meat popsicle"
+#echo "Hello World!"
 
+ls
