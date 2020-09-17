@@ -48,11 +48,12 @@
 
 ## Give your job a name
 #
-#PBS -N JOBNAME
+#PBS -N DealTestSubmit
+
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
-#PBS -m abe -M YOUR_EMAIL_HERE
+#PBS -m abe -M mmdeal@mail.wvu.edu
 
 # a number of software packages are available in the "genomics" module on spruce
 # this is only one of many modules
