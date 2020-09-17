@@ -1,3 +1,4 @@
+0. git clone https://github.com/wvuvectors/gendata-wvu.git
 
 1. Address to connect to the Spruce Knob cluster:
 spruce.hpc.wvu.edu
@@ -8,4 +9,11 @@ spruce.hpc.wvu.edu
 	git add *
 	git commit -m "MESSAGE"
 	git push origin master
+
+3. First thing to do on logging into spruce is change dir to scratch:
+	cd /scratch/USERID
+
+4. How to copy a file from your computer to your scratch dir on spruce:
+
+scp FILENAME tpd0001@spruce.hpc.wvu.edu:/scratch/USERID/
 
