@@ -17,3 +17,8 @@ spruce.hpc.wvu.edu
 
 scp FILENAME tpd0001@spruce.hpc.wvu.edu:/scratch/USERID/
 
+5. Pro-Tip: Use the <tab> key to auto-complete commands!
+
+6. Access past commands in your history using the up arrow key.
+The down arrow key will move forward in your history.
+
