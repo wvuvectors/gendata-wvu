@@ -52,7 +52,7 @@
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
-#PBS -m abe -hep00009@mix.wvu.edu
+#PBS -m abe hep00009@mix.wvu.edu
 
 # a number of software packages are available in the "genomics" module on spruce
 # this is only one of many modules
