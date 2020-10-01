@@ -60,8 +60,8 @@ cd $SCRATCH/gendata/Project_1
 #
 
 # move your read files to the cluster
-curl https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-13/SRR6982909/SRR6982909.1 > R1hp.fastq.gz
-curl https://sra-downloadb.st-va.ncbi.nlm.nih.gov/sos1/sra-pub-run-14/SRR6982909/SRR6982909.1 > R2hp.fastq.gz
+curl gs://sra-pub-src-6/SRR6982909/TA131_filtered_subreads.fastq > R1hp.fastq.gz
+curl s3://sra-pub-src-6/SRR6982909/TA131_filtered_subreads.fastq > R2hp.fastq.gz
 
 
 # decompress your files
