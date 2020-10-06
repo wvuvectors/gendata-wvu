@@ -60,20 +60,21 @@ cd $SCRATCH/gendata/Project_1
 #
 
 # move your read files to the cluster
+#curl gs://sra-pub-src-6/SRR6982909/TA131_filtered_subreads.fastq > R1hp1.fastq.gz
+#curl s3://sra-pub-src-6/SRR6982909/TA131_filtered_subreads.fastq > R2hp2.fastq.gz
 
 
-
-# decompress your files
-gunzip R1hp.fastq.gz
-gunzip R2hp.fastq.gz
+# decompress your files for TGZ file you need tar -zxvf, for gz, gunzip
+tar -zxvf SRR6982909_1.fastq.tgz
+#gunzip R2hp.fastq.gz
 
 
 # run fastqc
-fastqc R1hp.fastq
-fastqc R2hp.fastq
+fastqc SRR6982909_1.fastq
+#fastqc R2hp.fastq
 
 
-
+# qsub name of file in the spruce command prompt
 
 
 # deactivate the conda session when you have finished with your pipeline
