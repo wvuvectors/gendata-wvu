@@ -21,7 +21,7 @@
 
 ## Give your job a name
 #
-#PBS -N assembly_qc
+#PBS -N assembly_trim
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
@@ -59,21 +59,7 @@ cd $SCRATCH
 # put your commmand(s) in here
 #
 
-# move your read files to the cluster
-#curl https://sra-pub-src-1.s3.amazonaws.com/SRR10997251/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_R1.fastq.gz.1 > R1.fastq.gz
-#curl https://sra-pub-src-1.s3.amazonaws.com/SRR10997251/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_R2.fastq.gz.1 > R2.fastq.gz
-
-
-# decompress your files
-tar -zxvf R1.fastq.tgz
-tar -zxvf R2.fastq.tgz
-
-
-# run fastqc
-fastqc R1.fastq
-fastqc R2.fastq
-
-
+trimmomatic PE -threads 6 -trimlog trim.log R1.fastq R2.fastq -baseout trimmed.fastq CROP:90 MINLEN:90
 
 
 
