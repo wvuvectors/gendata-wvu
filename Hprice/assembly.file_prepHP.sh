@@ -53,7 +53,7 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH/gendata/Project_1
+cd $SCRATCH/hep00009
 
 
 # put your commmand(s) in here
@@ -68,6 +68,7 @@ cd $SCRATCH/gendata/Project_1
 tar -zxvf SRR6982909_1.fastq.tgz
 #gunzip R2hp.fastq.gz
 
+# 5029580.srih0001.hpc.wvu.edu
 
 # run fastqc
 fastqc SRR6982909_1.fastq
