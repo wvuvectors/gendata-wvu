@@ -12,16 +12,17 @@
 # Set the walltime, which is the maximum time that your job can run in HH:MM:SS
 # this can not exceed the maximum walltime determined by the queue that you set above
 #
-#PBS -lwalltime=02:00:00
+#PBS -lwalltime=04:00:00
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
-#PBS -lnodes=1:ppn=12
+#PBS -lnodes=1:ppn=4,pvmem=9gb
+# has to multiply together to equal 36 for ppn and allocated memory.
 
 
 ## Give your job a name
 #
-#PBS -N assembly_hp_project_1
+#PBS -N assembly_hp
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
@@ -53,7 +54,7 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH/hep00009
+cd $SCRATCH
 
 
 # put your commmand(s) in here
