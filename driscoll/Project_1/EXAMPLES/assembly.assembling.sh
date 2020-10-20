@@ -12,7 +12,7 @@
 # Set the walltime, which is the maximum time that your job can run in HH:MM:SS
 # this can not exceed the maximum walltime determined by the queue that you set above
 #
-#PBS -lwalltime=20:00:00
+#PBS -lwalltime=24:00:00
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
@@ -21,7 +21,7 @@
 
 ## Give your job a name
 #
-#PBS -N assembly_trim
+#PBS -N assembly_assemble
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
@@ -53,13 +53,13 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH
+cd $SCRATCH/gendata/Project_1/
 
 
 # put your commmand(s) in here
 #
 
-trimmomatic PE -threads 6 -trimlog trim.log Bb_R1.fastq Bb_R2.fastq -baseout trimmed.fastq MINLEN:70
+abyss-pe name=Bb31 k=35 in='Bb_R1.fastq Bb_R2.fastq'
 
 
 
