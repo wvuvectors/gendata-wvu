@@ -59,7 +59,7 @@ cd $SCRATCH
 # put your commmand(s) in here
 #
 
-trimmomatic PE -threads 6 -trimlog trim.log Bb_R1.fastq Bb_R2.fastq -baseout trimmed.fastq MINLEN:70
+trimmomatic PE -threads 6 -trimlog trim.log Bb_R1.fastq Bb_R2.fastq -baseout trimmed.fastq CROP:220
 
 
 

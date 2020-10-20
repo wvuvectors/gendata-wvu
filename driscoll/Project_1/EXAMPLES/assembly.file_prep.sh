@@ -16,7 +16,7 @@
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
-#PBS -lnodes=1:ppn=12
+#PBS -lnodes=1:ppn=4,pvmem=9gb
 
 
 ## Give your job a name
