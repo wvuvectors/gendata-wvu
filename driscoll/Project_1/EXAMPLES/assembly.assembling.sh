@@ -59,9 +59,9 @@ cd $SCRATCH/gendata/Project_1/
 # put your commmand(s) in here
 #
 
-abyss-pe -np 8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe -np 8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe -np 8 name=Bb31_55 k=55 in='Bb_R1.fastq Bb_R2.fastq'
+abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
+abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
+abyss-pe np=8 name=Bb31_55 k=55 in='Bb_R1.fastq Bb_R2.fastq'
 
 
 
