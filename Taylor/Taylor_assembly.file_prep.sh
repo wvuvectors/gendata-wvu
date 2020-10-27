@@ -12,7 +12,7 @@
 # Set the walltime, which is the maximum time that your job can run in HH:MM:SS
 # this can not exceed the maximum walltime determined by the queue that you set above
 #
-#PBS -lwalltime=02:00:00
+#PBS -lwalltime=04:00:00
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
@@ -60,8 +60,8 @@ cd $SCRATCH
 #
 
 # move your read files to the cluster
-#curl https://sra-pub-src-1.s3.amazonaws.com/SRR3926146/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_SRR3926146_1.fastq.gz.1 > SRR3926146_1.fastq.gz
-#curl https://sra-pub-src-1.s3.amazonaws.com/SRR3926146/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_SRR3926146_2.fastq.gz.1 > SRR3926146_2.fastq.gz
+#curl https://sra-pub-src-1.s3.amazonaws.com/SRR10997251/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_R1.fastq.gz.1 > R1.fastq.gz
+#curl https://sra-pub-src-1.s3.amazonaws.com/SRR10997251/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_R2.fastq.gz.1 > R2.fastq.gz
 
 
 # decompress your files
