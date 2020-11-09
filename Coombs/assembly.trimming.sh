@@ -20,12 +20,12 @@
 
 
 ## Give your job a name
-#
+# trimming
 #PBS -N assembly_trim
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
-#PBS -m abe -M timothy.driscoll@mail.wvu.edu
+#PBS -m abe -M mec0027@mix.wvu.edu
 
 # a number of software packages are available in the "genomics" module on spruce
 # this is only one of many modules
@@ -53,13 +53,13 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH
+cd $SCRATCH/
 
 
 # put your commmand(s) in here
 #
 
-trimmomatic PE -threads 6 -trimlog trim.log Bb_R1.fastq Bb_R2.fastq -baseout trimmed.fastq CROP:220
+trimmomatic PE -threads 6 -trimlog trim.log SRR12739615_1.fastq SRR12739615_2.fastq -baseout trimmed.fastq CROP:220
 
 
 
