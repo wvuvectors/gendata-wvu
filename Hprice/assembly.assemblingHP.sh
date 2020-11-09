@@ -53,7 +53,7 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH/hep00009
+cd $SCRATCH
 
 
 # put your commmand(s) in here
@@ -63,7 +63,7 @@ velveth assembly_31_hp 31 -fastq -short SRR6982909_1.fastq
 velvetg assembly_31_hp -cov_cutoff 4 -min_contig_lgth 50
 velveth assembly_23_hp 23 -fastq -short SRR6982909_1.fastq
 velvetg assembly_23_hp -cov_cutoff 4 -min_contig_lgth 50
-velveth assembly_manyK 33,49,2 -fastq -short SRR6982909_1.fastq
+velveth assembly_manyK 33,49 -fastq -short SRR6982909_1.fastq
 velvetg assembly_manyK -cov_cutoff 4 -min_contig_lgth 50
 
 #abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
