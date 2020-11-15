@@ -25,7 +25,7 @@
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
-#PBS -m abe -M timothy.driscoll@mail.wvu.edu
+#PBS -m abe -M jdtaylor1@mix.wvu.edu
 
 # a number of software packages are available in the "genomics" module on spruce
 # this is only one of many modules
@@ -59,9 +59,9 @@ cd $SCRATCH/gendata/Project_1/
 # put your commmand(s) in here
 #
 
-abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_55 k=55 in='Bb_R1.fastq Bb_R2.fastq'
+abyss-pe np=8 name=Bb31_35 k=35 in='SRR3926146_1.fastq SRR3926146_2.fastq'
+abyss-pe np=8 name=Bb31_45 k=45 in='SRR3926146_1.fastq SRR3926146_2.fastq'
+abyss-pe np=8 name=Bb31_55 k=55 in='SRR3926146_1.fastq SRR3926146_2.fastq'
 
 
 

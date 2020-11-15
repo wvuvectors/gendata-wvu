@@ -12,20 +12,20 @@
 # Set the walltime, which is the maximum time that your job can run in HH:MM:SS
 # this can not exceed the maximum walltime determined by the queue that you set above
 #
-#PBS -lwalltime=24:00:00
+#PBS -lwalltime=04:00:00
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
-#PBS -lnodes=1:ppn=12
+#PBS -lnodes=1:ppn=4,pvmem=9gb
 
 
 ## Give your job a name
 #
-#PBS -N assembly_assemble
+#PBS -N assembly_qc
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
-#PBS -m abe -M timothy.driscoll@mail.wvu.edu
+#PBS -m abe -M jdtaylor1@mix.wvu.edu
 
 # a number of software packages are available in the "genomics" module on spruce
 # this is only one of many modules
@@ -53,15 +53,27 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH/gendata/Project_1/
+cd $SCRATCH
 
 
 # put your commmand(s) in here
 #
 
-abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_55 k=55 in='Bb_R1.fastq Bb_R2.fastq'
+# move your read files to the cluster
+#curl https://sra-pub-src-1.s3.amazonaws.com/SRR10997251/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_R1.fastq.gz.1 > R1.fastq.gz
+#curl https://sra-pub-src-1.s3.amazonaws.com/SRR10997251/RDRIP_20180711_K00134_IL100105221_TACCATGG-JD3_L007_R2.fastq.gz.1 > R2.fastq.gz
+
+
+# decompress your files
+tar -zxvf SRR3926146_1.fastq.tgz
+tar -zxvf SRR3926146_2.fastq.tgz
+
+
+# run fastqc
+fastqc SRR3926146_1.fastq
+fastqc SRR3926146_2.fastq
+
+
 
 
 

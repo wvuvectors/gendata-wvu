@@ -20,12 +20,12 @@
 
 
 ## Give your job a name
-#
+# assembly
 #PBS -N assembly_assemble
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
-#PBS -m abe -M timothy.driscoll@mail.wvu.edu
+#PBS -m abe -M mec0027@mix.wvu.edu
 
 # a number of software packages are available in the "genomics" module on spruce
 # this is only one of many modules
@@ -53,15 +53,15 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH/gendata/Project_1/
+cd $SCRATCH/
 
 
 # put your commmand(s) in here
 #
 
-abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_55 k=55 in='Bb_R1.fastq Bb_R2.fastq'
+abyss-pe np=8 name=SRR12739615_115 k=115 in='SRR12739615_1.fastq SRR12739615_2.fastq'
+abyss-pe np=8 name=SRR12739615_125 k=125 in='SRR12739615_1.fastq SRR12739615_2.fastq'
+abyss-pe np=8 name=SRR12739615_135 k=135 in='SRR12739615_1.fastq SRR12739615_2.fastq'
 
 
 

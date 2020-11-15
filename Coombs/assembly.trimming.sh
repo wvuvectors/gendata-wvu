@@ -12,7 +12,7 @@
 # Set the walltime, which is the maximum time that your job can run in HH:MM:SS
 # this can not exceed the maximum walltime determined by the queue that you set above
 #
-#PBS -lwalltime=24:00:00
+#PBS -lwalltime=20:00:00
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
@@ -20,12 +20,12 @@
 
 
 ## Give your job a name
-#
-#PBS -N assembly_assemble
+# trimming
+#PBS -N assembly_trim
 
 ## Provide your email address, to receive notification when your job starts and ends
 #
-#PBS -m abe -M timothy.driscoll@mail.wvu.edu
+#PBS -m abe -M mec0027@mix.wvu.edu
 
 # a number of software packages are available in the "genomics" module on spruce
 # this is only one of many modules
@@ -53,15 +53,13 @@ conda activate tpd0001
 # the absolute path to your top-level scratch dir is /scratch/USERNAME (eg., /scratch/tpd0001)
 # you can use the environmental variable $SCRATCH as a shortcut
 #
-cd $SCRATCH/gendata/Project_1/
+cd $SCRATCH/
 
 
 # put your commmand(s) in here
 #
 
-abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
-abyss-pe np=8 name=Bb31_55 k=55 in='Bb_R1.fastq Bb_R2.fastq'
+trimmomatic PE -threads 6 -trimlog trim.log SRR12739615_1.fastq SRR12739615_2.fastq -baseout trimmed.fastq CROP:220
 
 
 
