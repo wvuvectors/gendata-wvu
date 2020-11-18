@@ -59,12 +59,10 @@ cd $SCRATCH
 # put your commmand(s) in here
 #
 
-velveth assembly_31_hp3 31 -fastq -short SRR6982909_1.fastq
-velvetg assembly_31_hp3 -cov_cutoff 4 -min_contig_lgth 150
-velveth assembly_23_hp3 23 -fastq -short SRR6982909_1.fastq
-velvetg assembly_23_hp3 -cov_cutoff 4 -min_contig_lgth 150
-velveth assembly_manyK3 33,49 -fastq -short SRR6982909_1.fastq
-velvetg assembly_manyK3 -cov_cutoff 4 -min_contig_lgth 150
+velveth assembly_31_hp4 31 -fastq -short SRR6982909_1.fastq
+velvetg assembly_31_hp4 -cov_cutoff 4 -min_contig_lgth 150
+velveth assembly_23_hp4 23 -fastq -short SRR6982909_1.fastq
+velvetg assembly_23_hp4 -cov_cutoff 4 -min_contig_lgth 150
 
 #abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
 #abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
