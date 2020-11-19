@@ -59,9 +59,9 @@ cd $SCRATCH/
 # put your commmand(s) in here
 #
 
-abyss-pe np=8 name=SRR12739615_115 k=115 in='SRR12739615_1.fastq SRR12739615_2.fastq'
-abyss-pe np=8 name=SRR12739615_125 k=125 in='SRR12739615_1.fastq SRR12739615_2.fastq'
-abyss-pe np=8 name=SRR12739615_135 k=135 in='SRR12739615_1.fastq SRR12739615_2.fastq'
+abyss-pe np=8 name=SRR12739615_123 k=123 in='SRR12739615_1.fastq SRR12739615_2.fastq'
+abyss-pe np=8 name=SRR12739615_121 k=121 in='SRR12739615_1.fastq SRR12739615_2.fastq'
+abyss-pe np=8 name=SRR12739615_128 k=128 in='SRR12739615_1.fastq SRR12739615_2.fastq'
 
 
 
