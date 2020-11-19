@@ -59,9 +59,7 @@ cd $SCRATCH
 # put your commmand(s) in here
 #
 
-abyss-pe k=23 se=SRR6982909_1.fastq name=Assembly_23take1 "unitigs"
-abyss-pe k=33 se=SRR6982909_1.fastq name=Assembly_33take1 "unitigs"
-abyss-pe k=43 se=SRR6982909_1.fastq name=Assembly_43take1 "unitigs"
+abyss-pe k=57 se=SRR6982909_1.fastq name=Assembly_23take1 "unitigs"
 
 #abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
 #abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
