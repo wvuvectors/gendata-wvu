@@ -16,7 +16,7 @@
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
-#PBS -lnodes=1:ppn=2,pvmem=18gb
+#PBS -lnodes=1:ppn=6,pvmem=6gb
 
 
 ## Give your job a name
@@ -59,7 +59,7 @@ cd $SCRATCH
 # put your commmand(s) in here
 #
 
-abyss-pe k=57 se=SRR6982909_1.fastq name=Assembly_23take1 "unitigs"
+abyss-pe np=6 k=57 se=SRR6982909_1.fastq name=Assembly_23take1 "unitigs"
 
 #abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
 #abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
