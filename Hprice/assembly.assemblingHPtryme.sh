@@ -16,7 +16,7 @@
 
 # Set the number of nodes, and the number of processors per node (up to 12), that you want to use
 #
-#PBS -lnodes=1:ppn=1,pvmem=36gb
+#PBS -lnodes=1:ppn=2,pvmem=18gb
 
 
 ## Give your job a name
@@ -59,10 +59,9 @@ cd $SCRATCH
 # put your commmand(s) in here
 #
 
-velveth assembly_31_hp4 31 -fastq -short SRR6982909_1.fastq
-velvetg assembly_31_hp4 -cov_cutoff 4 -min_contig_lgth 150
-velveth assembly_23_hp4 23 -fastq -short SRR6982909_1.fastq
-velvetg assembly_23_hp4 -cov_cutoff 4 -min_contig_lgth 150
+abyss-pe k=23 se=SRR6982909_1.fastq name=Assembly_23take1 "unitigs"
+abyss-pe k=33 se=SRR6982909_1.fastq name=Assembly_33take1 "unitigs"
+abyss-pe k=43 se=SRR6982909_1.fastq name=Assembly_43take1 "unitigs"
 
 #abyss-pe np=8 name=Bb31_35 k=35 in='Bb_R1.fastq Bb_R2.fastq'
 #abyss-pe np=8 name=Bb31_45 k=45 in='Bb_R1.fastq Bb_R2.fastq'
